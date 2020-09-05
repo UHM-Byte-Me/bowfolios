@@ -1,10 +1,24 @@
-# bowfolios
+# BowFolios
 
-A new Flutter project.
+ICS 491: Hawaii Annual Code Challenge
+
+Team: byte me;
+
+Members: Arslan Rakhmankulov, Gum San Aung
+
+This project is a mobile implenmentation of [BowFolios](https://bowfolios.github.io/) powered by Flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this program locally,
+
+<ol>
+<li>Clone the rep</li>
+<li>Go into the directory</li>
+<li>Run 'flutter packages get'</li>
+<li>Start your Andrid or iOS simulator</li>
+<li>Run 'flutter run'</li>
+</ol>
 
 A few resources to get you started if this is your first Flutter project:
 
