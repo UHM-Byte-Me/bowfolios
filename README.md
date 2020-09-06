@@ -6,7 +6,9 @@ Team: byte me;
 
 Members: Arslan Rakhmankulov, Gum San Aung
 
-This project is a mobile implenmentation of [BowFolios](https://bowfolios.github.io/) powered by Flutter.
+This project is a mobile implenmentation of [BowFolios](https://bowfolios.github.io/).
+
+Built with Flutter and powered by Firebase
 
 ## Getting Started
 
@@ -16,7 +18,7 @@ To run this program locally,
 <li>Clone the rep</li>
 <li>Go into the directory</li>
 <li>Run 'flutter packages get'</li>
-<li>Start your Andrid or iOS simulator</li>
+<li>Start your Andrid emulator or iOS simulator</li>
 <li>Run 'flutter run'</li>
 </ol>
 
