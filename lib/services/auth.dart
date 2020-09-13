@@ -28,11 +28,4 @@ class AuthService {
   }
 
   // Sign out
-  void signOut() {
-    try {
-      _auth.signOut();
-    } catch (e) {
-      print(e.toString());
-    }
-  }
 }

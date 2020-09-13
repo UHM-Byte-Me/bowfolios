@@ -1,26 +1,10 @@
-# BowFolios
+# bowfolios
 
-ICS 491: Hawaii Annual Code Challenge
-
-Team: byte me;
-
-Members: Arslan Rakhmankulov, Gum San Aung
-
-This project is a mobile implenmentation of [BowFolios](https://bowfolios.github.io/).
-
-Built with Flutter and powered by Firebase
+A new Flutter project.
 
 ## Getting Started
 
-To run this program locally,
-
-<ol>
-<li>Clone the rep</li>
-<li>Go into the directory</li>
-<li>Run 'flutter packages get'</li>
-<li>Start your Andrid emulator or iOS simulator</li>
-<li>Run 'flutter run'</li>
-</ol>
+This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
