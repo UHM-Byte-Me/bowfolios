@@ -1,4 +1,4 @@
-import 'package:bowfolios/screens/authenticate/log_in.dart';
+import 'package:bowfolios/screens/authentication/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class Authenticate extends StatefulWidget {
@@ -9,6 +9,6 @@ class Authenticate extends StatefulWidget {
 class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: LogInPage());
+    return Container(child: SignUp());
   }
 }

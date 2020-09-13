@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "531856240834-1eu4lqnmuan1girln08g4c1390n5qilf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.byte_me.bowfolios",
+            "certificate_hash": "8e91dd54270c6fbd480aa270d787c6468de133a8"
+          }
+        },
+        {
           "client_id": "531856240834-57va10hk1sdjak10bia0scpbdie9ejoa.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -30,6 +38,13 @@
             {
               "client_id": "531856240834-57va10hk1sdjak10bia0scpbdie9ejoa.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "531856240834-ic3pskdsui0mp1mjumucaa9v8o5p1in7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.byteme.bowfolios"
+              }
             }
           ]
         }

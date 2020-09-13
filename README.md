@@ -6,7 +6,7 @@ Team: byte me;
 
 Members: Arslan Rakhmankulov, Gum San Aung
 
-This project is a mobile implenmentation of [BowFolios](https://bowfolios.github.io/).
+This project is a mobile implementation of [BowFolios](https://bowfolios.github.io/).
 
 Built with Flutter and powered by Firebase
 
