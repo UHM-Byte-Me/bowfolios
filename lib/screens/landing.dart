@@ -1,5 +1,5 @@
 import 'package:bowfolios/screens/authentication/authenticate.dart';
-import 'package:bowfolios/screens/home/home.dart';
+import 'package:bowfolios/screens/home/tempHome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +10,7 @@ class LandingWrapper extends StatelessWidget {
     final user = Provider.of<User>(context);
     print(user);
     if (user != null) {
-      return Home();
+      return TempHome();
     } else {
       return Authenticate();
     }
