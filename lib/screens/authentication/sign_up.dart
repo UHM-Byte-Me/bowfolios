@@ -1,3 +1,4 @@
+import 'package:bowfolios/screens/home/tempHome.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
@@ -15,13 +16,23 @@ class _SignUpState extends State<SignUp> {
         title: Text("Sign Up"),
       ),
       backgroundColor: Colors.blue[100],
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-        child: RaisedButton(
-          onPressed: () async {},
-          child: Text("Log In"),
-        ),
-      ),
+      body: Column(
+          //padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+          children: [
+            RaisedButton(
+              onPressed: () async {},
+              child: Text("Log In"),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TempHome()),
+                );
+              },
+              child: Text("Home Screen"),
+            ),
+          ]),
     );
   }
 }
