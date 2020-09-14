@@ -47,6 +47,7 @@ class _SignUpState extends State<SignUp> {
                     height: 20.0,
                   ),
                   TextFormField(
+                    keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(
                           left: 15, bottom: 11, top: 11, right: 15),

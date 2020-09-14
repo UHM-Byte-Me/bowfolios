@@ -46,6 +46,7 @@ class _LogInState extends State<LogIn> {
                     height: 10.0,
                   ),
                   TextFormField(
+                    keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(
                           left: 15, bottom: 11, top: 11, right: 15),
@@ -61,6 +62,7 @@ class _LogInState extends State<LogIn> {
                     height: 20.0,
                   ),
                   TextFormField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(
                           left: 15, bottom: 11, top: 11, right: 15),
