@@ -1,6 +1,5 @@
 import 'package:bowfolios/services/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:bowfolios/screens/home/tempHome.dart';
 
 class LogIn extends StatefulWidget {
   final Function toggle;
@@ -105,15 +104,6 @@ class _LogInState extends State<LogIn> {
                   ),
                 ],
               ),
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TempHome()),
-                );
-              },
-              child: Text("Home Screen"),
             ),
           ],
         ),
