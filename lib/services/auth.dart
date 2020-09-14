@@ -4,9 +4,7 @@ class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Stream<User> get userStream {
-    return _auth
-        .authStateChanges()
-        .map((event) => FirebaseAuth.instance.currentUser);
+    return _auth.authStateChanges();
   }
 
   // Sign in with email and password
