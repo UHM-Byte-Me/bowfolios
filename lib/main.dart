@@ -1,4 +1,10 @@
+import 'package:bowfolios/screens/add_project/add_project.dart';
+import 'package:bowfolios/screens/filter/filter.dart';
+import 'package:bowfolios/screens/interests/interests.dart';
 import 'package:bowfolios/screens/landing.dart';
+import 'package:bowfolios/screens/profiles/profiles.dart';
+import 'package:bowfolios/screens/projects/projects.dart';
+import 'package:bowfolios/screens/your_profile/your_profile.dart';
 import 'package:bowfolios/services/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -63,6 +69,14 @@ class _AppState extends State<App> {
           primarySwatch: Colors.blueGrey,
         ),
         home: LandingWrapper(),
+        routes: {
+          '/Profiles': (context) => Profiles(),
+          '/Projects': (context) => Projects(),
+          '/Interests': (context) => Interests(),
+          '/AddProject': (context) => AddProject(),
+          '/Filter': (context) => Filter(),
+          '/YourProfile': (context) => YourProfile(),
+        },
       ),
     );
   }

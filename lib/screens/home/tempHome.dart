@@ -1,3 +1,4 @@
+import 'package:bowfolios/screens/home/custom_drawer.dart';
 import 'package:bowfolios/screens/home/image_placement.dart';
 import 'package:bowfolios/screens/home/text_section.dart';
 import 'package:bowfolios/services/auth.dart';
@@ -31,6 +32,7 @@ class TempHome extends StatelessWidget {
           )
         ],
       ),
+      drawer: CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
