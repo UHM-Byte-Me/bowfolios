@@ -7,7 +7,6 @@ class Profile {
   final String bio;
   final String title;
   final String picture;
-  final bool isCreated;
 
   Profile({
     this.id,
@@ -16,16 +15,12 @@ class Profile {
     this.bio,
     this.title,
     this.picture,
-    this.isCreated,
   });
 
   factory Profile.fromFireStore(DocumentSnapshot doc) {
     Map data = doc.data();
 
-    bool status = true;
-
     if (data == null) {
-      status = false;
       data = {};
     }
 
@@ -36,7 +31,6 @@ class Profile {
       bio: data["bio"] ?? "",
       title: data["title"] ?? "",
       picture: data["picture"] ?? "",
-      isCreated: status,
     );
   }
 }

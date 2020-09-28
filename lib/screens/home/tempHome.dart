@@ -11,6 +11,8 @@ class TempHome extends StatelessWidget {
 
     if (profile != null) {
       print(profile.id);
+      print(profile.fName);
+      print(profile.lName);
     }
 
     return Scaffold(

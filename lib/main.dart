@@ -54,8 +54,8 @@ class _AppState extends State<App> {
       //   return Loading();
     }
 
-    return StreamProvider<User>.value(
-      value: AuthService().userStream,
+    return MultiProvider(
+      providers: [StreamProvider<User>.value(value: AuthService().userStream)],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "BowFolios",

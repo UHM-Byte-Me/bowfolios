@@ -34,7 +34,7 @@ class DataService {
     return _profiles
         .doc(id)
         .snapshots()
-        .map((snap) => Profile.fromFireStore(snap));
+        .map((snap) => snap.data() != null ? Profile.fromFireStore(snap) : {});
   }
 
   Stream<List<Interest>> interestsSteam() {
