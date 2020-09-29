@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Profile {
-  final String id;
-  final String fName;
-  final String lName;
-  final String bio;
-  final String title;
-  final String picture;
+  String id;
+  String fName;
+  String lName;
+  String bio;
+  String title;
+  String picture;
 
   Profile({
     this.id,
