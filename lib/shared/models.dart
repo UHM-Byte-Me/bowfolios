@@ -52,11 +52,11 @@ class Interest {
 }
 
 class Project {
-  final String id;
-  final String name;
-  final String homePage;
-  final String description;
-  final String picture;
+  String id;
+  String name;
+  String homePage;
+  String description;
+  String picture;
 
   Project({this.id, this.name, this.homePage, this.description, this.picture});
 
