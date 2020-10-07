@@ -3,13 +3,16 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 
 class DataService {
+  FirebaseFirestore _base;
   CollectionReference _profiles;
-
   CollectionReference _interests;
+  CollectionReference _projects;
 
   DataService() {
-    this._profiles = FirebaseFirestore.instance.collection('profiles');
-    this._interests = FirebaseFirestore.instance.collection('interests');
+    this._base = FirebaseFirestore.instance;
+    this._profiles = _base.collection('profiles');
+    this._interests = _base.collection('interests');
+    this._projects = _base.collection('projects');
   }
 
   Future getProfile(String id) async {
@@ -25,9 +28,37 @@ class DataService {
         'lName': input.lName,
         'bio': input.bio,
         'title': input.title,
-        'picture': input.picture
+        'picture': input.picture,
+        'interets': input.interests,
+        'projects': input.projects,
       },
     );
+
+    input.interests.forEach((element) {
+      // find id of interest
+      _interests.where("name" == element).get().then((value) => {
+            // add picture to interest
+            if (value.size > 0)
+              {
+                _interests.doc(value.docs[0].id).set({
+                  input.id: {'picture': input.picture}
+                })
+              }
+          });
+    });
+
+    input.projects.forEach((element) {
+      // find id of interest
+      _projects.where("name" == element).get().then((value) => {
+            // add picture to interest
+            if (value.size > 0)
+              {
+                _projects.doc(value.docs[0].id).set({
+                  input.id: {'picture': input.picture}
+                })
+              }
+          });
+    });
   }
 
   Stream<Profile> profileStream(String id) {
@@ -49,5 +80,37 @@ class DataService {
     }
 
     return [];
+  }
+
+  Future<Project> getProject(String name) async {
+    return _projects
+        .where("name" == name)
+        .get()
+        .then((value) => Project.fromFireStore(value.docs[0]));
+  }
+
+  void updateProject(Project input) {
+    _profiles.doc(input.id).set(
+      {
+        "name": input.name,
+        "homepage": input.homePage,
+        "description": input.description,
+        "picture": input.picture,
+        "interests": input.interests,
+      },
+    );
+
+    input.interests.forEach((element) {
+      // find id of interest
+      _interests.where("name" == element).get().then((value) => {
+            // add picture to interest
+            if (value.size > 0)
+              {
+                _interests.doc(value.docs[0].id).set({
+                  input.id: {'picture': input.picture}
+                })
+              }
+          });
+    });
   }
 }
