@@ -7,6 +7,8 @@ class Profile {
   String bio;
   String title;
   String picture;
+  List<String> interests;
+  List<String> projects;
 
   Profile({
     this.id,
@@ -15,6 +17,8 @@ class Profile {
     this.bio,
     this.title,
     this.picture,
+    this.interests,
+    this.projects,
   });
 
   factory Profile.fromFireStore(DocumentSnapshot doc) {
@@ -31,15 +35,22 @@ class Profile {
       bio: data["bio"] ?? "",
       title: data["title"] ?? "",
       picture: data["picture"] ?? "",
+      interests: data["interests"] ?? [],
+      projects: data["projects"] ?? [],
     );
   }
 }
 
 class Interest {
-  final String id;
-  final String name;
+  String id;
+  String name;
+  Object users;
 
-  Interest({this.id, this.name});
+  Interest({
+    this.id,
+    this.name,
+    this.users,
+  });
 
   factory Interest.fromFireStore(DocumentSnapshot doc) {
     Map data = doc.data();
@@ -47,6 +58,7 @@ class Interest {
     return Interest(
       id: doc.id,
       name: data["name"],
+      users: data["users"] ?? {},
     );
   }
 }
@@ -57,42 +69,27 @@ class Project {
   String homePage;
   String description;
   String picture;
+  List<String> interests;
 
-  Project({this.id, this.name, this.homePage, this.description, this.picture});
+  Project({
+    this.id,
+    this.name,
+    this.homePage,
+    this.description,
+    this.picture,
+    this.interests,
+  });
 
   factory Project.fromFireStore(DocumentSnapshot doc) {
     Map data = doc.data();
 
     return Project(
       id: doc.id,
-      name: data["name"],
+      name: data["name"] ?? "",
       homePage: data["homePage"],
-      description: data["description"],
-      picture: data["picture"],
+      description: data["description"] ?? "",
+      picture: data["picture"] ?? "",
+      interests: data["interests"] ?? "",
     );
   }
-}
-
-class ProfileInterests {
-  final String id;
-  final String profile;
-  final String interest;
-
-  ProfileInterests({this.id, this.profile, this.interest});
-}
-
-class ProfileProjects {
-  final String id;
-  final String profile;
-  final String project;
-
-  ProfileProjects({this.id, this.profile, this.project});
-}
-
-class ProjectInterests {
-  final String id;
-  final String project;
-  final String interest;
-
-  ProjectInterests({this.id, this.project, this.interest});
 }
