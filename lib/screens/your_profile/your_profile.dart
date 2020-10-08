@@ -1,6 +1,7 @@
 import 'package:bowfolios/screens/home/custom_drawer.dart';
 import 'package:bowfolios/shared/models.dart';
 import 'package:flutter/material.dart';
+import 'package:multiselect_formfield/multiselect_formfield.dart';
 
 class YourProfile extends StatefulWidget {
   @override
@@ -83,6 +84,62 @@ class _YourProfileState extends State<YourProfile> {
                   //   }
                   // },
                   onSaved: (val) => setState(() => _userProfile.title = val),
+                ),
+                MultiSelectFormField(
+                  autovalidate: false,
+                  title: Text('My interests'),
+                  validator: (value) {
+                    if (value == null || value.length == 0) {
+                      return 'Please select one or more options';
+                    }
+                  },
+                  dataSource: [
+                    {
+                      "display": "Software Engineering",
+                      "value": "Software Engineering",
+                    },
+                    {
+                      "display": "Climate Change",
+                      "value": "Climate Change",
+                    },
+                    {
+                      "display": "HPC",
+                      "value": "HPC",
+                    },
+                    {
+                      "display": "Distributed Computing",
+                      "value": "Distributed Computing",
+                    },
+                    {
+                      "display": "AI",
+                      "value": "AI",
+                    },
+                    {
+                      "display": "Visualization",
+                      "value": "Visualization",
+                    },
+                    {
+                      "display": "Scalable IP Networks",
+                      "value": "Scalable IP Networks",
+                    },
+                    {
+                      "display": "Educational Technology",
+                      "value": "Educational Technology",
+                    },
+                    {
+                      "display": "Unity",
+                      "value": "Unity",
+                    },
+                  ],
+                  textField: 'display',
+                  valueField: 'value',
+                  okButtonLabel: 'OK',
+                  cancelButtonLabel: 'CANCEL',
+                  // required: true,
+                  // hintText: 'Please choose one or more',
+                  // val: _myActivities,
+                  onSaved: (val) =>
+                      setState(() => _userProfile.interests = val),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(
