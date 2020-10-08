@@ -95,42 +95,13 @@ class _YourProfileState extends State<YourProfile> {
                   },
                   dataSource: [
                     {
-                      "display": "Software Engineering",
-                      "value": "Software Engineering",
-                    },
-                    {
-                      "display": "Climate Change",
-                      "value": "Climate Change",
-                    },
-                    {
-                      "display": "HPC",
-                      "value": "HPC",
-                    },
-                    {
-                      "display": "Distributed Computing",
-                      "value": "Distributed Computing",
-                    },
-                    {
-                      "display": "AI",
-                      "value": "AI",
-                    },
-                    {
-                      "display": "Visualization",
-                      "value": "Visualization",
-                    },
-                    {
-                      "display": "Scalable IP Networks",
-                      "value": "Scalable IP Networks",
-                    },
-                    {
-                      "display": "Educational Technology",
-                      "value": "Educational Technology",
-                    },
-                    {
-                      "display": "Unity",
-                      "value": "Unity",
-                    },
+                      "display":
+                          "Add a map frunction to pull stuff from database here",
+                      "value":
+                          "Add a map frunction to pull stuff from database here",
+                    }
                   ],
+
                   textField: 'display',
                   valueField: 'value',
                   okButtonLabel: 'OK',

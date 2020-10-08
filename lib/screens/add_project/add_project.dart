@@ -1,6 +1,7 @@
 import 'package:bowfolios/screens/home/custom_drawer.dart';
 import 'package:bowfolios/shared/models.dart';
 import 'package:flutter/material.dart';
+import 'package:multiselect_formfield/multiselect_formfield.dart';
 
 class AddProject extends StatefulWidget {
   @override
@@ -71,6 +72,60 @@ class _AddProjectState extends State<AddProject> {
                   //   }
                   // },
                   onSaved: (val) => setState(() => _userProject.picture = val),
+                ),
+                MultiSelectFormField(
+                  autovalidate: false,
+                  title: Text('My Interests'),
+                  validator: (value) {
+                    if (value == null || value.length == 0) {
+                      return 'Please select one or more options';
+                    }
+                  },
+                  dataSource: [
+                    {
+                      "display":
+                          "Add a map frunction to pull stuff from database here",
+                      "value":
+                          "Add a map frunction to pull stuff from database here",
+                    }
+                  ],
+
+                  textField: 'display',
+                  valueField: 'value',
+                  okButtonLabel: 'OK',
+                  cancelButtonLabel: 'CANCEL',
+                  // required: true,
+                  // hintText: 'Please choose one or more',
+                  // val: _myActivities,
+                  onSaved: (val) =>
+                      setState(() => _userProject.interests = val),
+                ),
+                MultiSelectFormField(
+                  autovalidate: false,
+                  title: Text('Participants'),
+                  validator: (value) {
+                    if (value == null || value.length == 0) {
+                      return 'Please select one or more options';
+                    }
+                  },
+                  dataSource: [
+                    {
+                      "display":
+                          "Add a map frunction to pull stuff from database here",
+                      "value":
+                          "Add a map frunction to pull stuff from database here",
+                    }
+                  ],
+
+                  textField: 'display',
+                  valueField: 'value',
+                  okButtonLabel: 'OK',
+                  cancelButtonLabel: 'CANCEL',
+                  // required: true,
+                  // hintText: 'Please choose one or more',
+                  // val: _myActivities,
+                  onSaved: (val) =>
+                      setState(() => _userProject.participants = val),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(

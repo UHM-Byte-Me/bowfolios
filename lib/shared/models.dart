@@ -70,6 +70,7 @@ class Project {
   String description;
   String picture;
   List<String> interests;
+  List<String> participants;
 
   Project({
     this.id,
