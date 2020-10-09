@@ -68,8 +68,8 @@ class DataService {
         .map((snap) => snap.data() != null ? Profile.fromFireStore(snap) : {});
   }
 
-  Stream<List<Interest>> interestsSteam() {
-    return _interests.snapshots().map(getInterestsList);
+  Future<List<Interest>> interestsSteam() async {
+    return _interests.get().then((value) => getInterestsList(value));
   }
 
   List<Interest> getInterestsList(QuerySnapshot snap) {
