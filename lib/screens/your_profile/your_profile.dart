@@ -1,6 +1,10 @@
 import 'package:bowfolios/screens/home/custom_drawer.dart';
+import 'package:bowfolios/services/db.dart';
 import 'package:bowfolios/shared/models.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:multiselect_formfield/multiselect_formfield.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class YourProfile extends StatefulWidget {
   @override
@@ -10,6 +14,9 @@ class YourProfile extends StatefulWidget {
 class _YourProfileState extends State<YourProfile> {
   final _userProfile = Profile();
   final _formKey = GlobalKey<FormState>();
+
+  // ???? trying to get a list of interests here
+  // var listOfInterests = DataService().getInterestsList();
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +91,33 @@ class _YourProfileState extends State<YourProfile> {
                   // },
                   onSaved: (val) => setState(() => _userProfile.title = val),
                 ),
+                MultiSelectFormField(
+                  autovalidate: false,
+                  title: Text('My interests'),
+                  validator: (value) {
+                    if (value == null || value.length == 0) {
+                      return 'Please select one or more options';
+                    }
+                  },
+                  dataSource: [
+                    {
+                      "display":
+                          "Add a map frunction to pull stuff from database here",
+                      "value":
+                          "Add a map frunction to pull stuff from database here",
+                    }
+                  ], // ..addAll(listOfInterests),
+
+                  textField: 'display',
+                  valueField: 'value',
+                  okButtonLabel: 'OK',
+                  cancelButtonLabel: 'CANCEL',
+                  // required: true,
+                  // hintText: 'Please choose one or more',
+                  // val: _myActivities,
+                  onSaved: (val) =>
+                      setState(() => _userProfile.interests = val),
+                ),
                 Container(
                   padding: const EdgeInsets.symmetric(
                       vertical: 16.0, horizontal: 16.0),
@@ -103,5 +137,14 @@ class _YourProfileState extends State<YourProfile> {
         ),
       ),
     );
+  }
+
+  Iterable<Map<String, dynamic>> mapInterests(List interests) {
+    return interests
+        .map((interest) => {"display": interest, "value": interest})
+        .toList();
+
+    // .map((interest) => {"display": interest, "value": interest})
+    // .toList();
   }
 }
