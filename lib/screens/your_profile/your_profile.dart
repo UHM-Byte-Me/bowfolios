@@ -125,7 +125,7 @@ class _YourProfileState extends State<YourProfile> {
                     onPressed: () {
                       final form = _formKey.currentState;
                       if (form.validate()) {
-                        //SEND INFOR TO DATABASE HERE
+                        //SEND INFO TO DATABASE HERE
                       }
                     },
                     child: Text('Submit'),
