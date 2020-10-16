@@ -126,6 +126,9 @@ class _YourProfileState extends State<YourProfile> {
                       final form = _formKey.currentState;
                       if (form.validate()) {
                         //SEND INFO TO DATABASE HERE
+
+                        DataService()
+                            .updateProfile(new Profile(bio: 'TestBIO'));
                       }
                     },
                     child: Text('Submit'),

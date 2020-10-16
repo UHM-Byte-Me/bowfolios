@@ -20,18 +20,22 @@ class Profiles extends StatelessWidget {
             ),
             // trailing: Icon('${Image.network(document.data()['picture'])}'),
             // trailing: ImageIcon(NetworkImage(document.data()['picture']))
-            trailing: CircleAvatar(
+            leading: CircleAvatar(
+              //radius: 50,
               backgroundImage: NetworkImage(document.data()['picture']),
             ),
           ),
           Divider(),
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Wrap(
                 spacing: 10.0,
                 runSpacing: 20.0,
                 // verticalDirection: VerticalDirection.up,
-                children: []..addAll(mapInterests(interestList)),
+                children: [
+                  Padding(padding: const EdgeInsets.all(5.0)),
+                ]..addAll(mapInterests(interestList)),
               ),
             ],
           ),
@@ -48,7 +52,9 @@ class Profiles extends StatelessWidget {
               Wrap(
                 spacing: 10.0,
                 runSpacing: 20.0,
-                children: []..addAll(mapProjects(projectList)),
+                children: [
+                  Padding(padding: const EdgeInsets.all(5.0)),
+                ]..addAll(mapProjects(projectList)),
               ),
             ],
           )
