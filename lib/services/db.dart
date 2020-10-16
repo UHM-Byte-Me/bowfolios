@@ -21,6 +21,48 @@ class DataService {
     return Profile.fromFireStore(snap);
   }
 
+  Future<List> searchProject(String interest) async {
+    if (interest == "") {
+      return null;
+    }
+    return _projects
+        .where('interests', arrayContains: interest)
+        .get()
+        .then((value) {
+      if (value.docs.length > 0) {
+        print("Proj Found");
+        return value.docs.map((data) {
+          return Interest.fromFireStore(data);
+        }).toList();
+      }
+      return null;
+    });
+  }
+
+  Future<List> searchProfile(String interest) async {
+    if (interest == "") {
+      return null;
+    }
+    return _profiles
+        .where('interests', arrayContains: interest)
+        .get()
+        .then((value) {
+      if (value.docs.length > 0) {
+        print("Prof Found");
+        return value.docs.map((data) {
+          var tmp = Profile.fromFireStore(data);
+
+          // print("Hello");
+
+          print(tmp.toString());
+
+          return tmp;
+        }).toList();
+      }
+      return null;
+    });
+  }
+
   void updateProfile(Profile input) {
     _profiles.doc(input.id).set(
       {
@@ -69,17 +111,16 @@ class DataService {
   }
 
   Future<List<Interest>> interestsSteam() async {
-    return _interests.get().then((value) => getInterestsList(value));
-  }
-
-  List<Interest> getInterestsList(QuerySnapshot snap) {
-    if (snap.docs.length > 0) {
-      return snap.docs.map((data) {
-        return Interest.fromFireStore(data);
-      });
-    }
-
-    return [];
+    return _interests.get().then(
+      (snap) {
+        if (snap.docs.length > 0) {
+          return snap.docs.map((data) {
+            return Interest.fromFireStore(data);
+          }).toList();
+        }
+        return [];
+      },
+    );
   }
 
   Future<Project> getProject(String name) async {

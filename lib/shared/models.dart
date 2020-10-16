@@ -23,6 +23,7 @@ class Profile {
 
   factory Profile.fromFireStore(DocumentSnapshot doc) {
     Map data = doc.data();
+    // print("prof generated");
 
     if (data == null) {
       data = {};
@@ -53,6 +54,8 @@ class Interest {
   });
 
   factory Interest.fromFireStore(DocumentSnapshot doc) {
+    // print("int generated");
+
     Map data = doc.data();
 
     return Interest(
@@ -82,7 +85,10 @@ class Project {
   });
 
   factory Project.fromFireStore(DocumentSnapshot doc) {
+    // print("proj generated");
     Map data = doc.data();
+
+    // print(data.toString());
 
     return Project(
       id: doc.id,
