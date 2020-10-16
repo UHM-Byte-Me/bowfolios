@@ -20,27 +20,50 @@ class Profiles extends StatelessWidget {
             ),
             // trailing: Icon('${Image.network(document.data()['picture'])}'),
             // trailing: ImageIcon(NetworkImage(document.data()['picture']))
-            trailing: CircleAvatar(
+            leading: CircleAvatar(
+              //radius: 50,
               backgroundImage: NetworkImage(document.data()['picture']),
             ),
           ),
           Divider(),
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Wrap(
                 spacing: 10.0,
                 runSpacing: 20.0,
                 // verticalDirection: VerticalDirection.up,
-                children: []..addAll(mapInterests(interestList)),
+                children: [
+                  Padding(padding: const EdgeInsets.all(5.0)),
+                ]..addAll(mapInterests(interestList)),
               ),
             ],
           ),
           Divider(),
-          Row(
-            children: [
-              Text('Projects'),
-            ],
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+              padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+              child: Text(
+                'Projects',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
+            ),
           ),
+          // Row(
+          //   children: [
+          //     child: Container(
+          //     padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+          //     child: Text(
+          //       'Projects',
+          //       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+          //     ),),
+
+          //   ],
+
           Row(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -48,7 +71,9 @@ class Profiles extends StatelessWidget {
               Wrap(
                 spacing: 10.0,
                 runSpacing: 20.0,
-                children: []..addAll(mapProjects(projectList)),
+                children: [
+                  Padding(padding: const EdgeInsets.all(5.0)),
+                ]..addAll(mapProjects(projectList)),
               ),
             ],
           )
