@@ -36,26 +36,106 @@ class TempHome extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TextSection(
-              "Start by making your profile...",
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text(
+                  "Start by making your profile...",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
             ),
-            ImagePlacement("assets/images/Profile.png"),
-            TextSection(
-              "The Profiles page shows all the current defined profiles and their associated Projects and Interests:",
+            Divider(
+              height: 20.0,
             ),
-            ImagePlacement("assets/images/Profiles.png"),
-            TextSection(
-              "The Projects page shows all of the currently defined Projects and their associated Profiles and Interests",
+            ImagePlacement("assets/newImages/addprofile.png"),
+            Divider(
+              height: 100.0,
+              thickness: 10.0,
+              color: Colors.green,
             ),
-            ImagePlacement("assets/images/Projects.png"),
-            TextSection(
-              "Create your own project!",
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text(
+                  "The Profiles page shows all the current defined profiles and their associated Projects and Interests:",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
             ),
-            ImagePlacement("assets/images/YourProject.png"),
-            TextSection(
-              "Finally, the Interests page shows all the currently defined Interests, and their associated Profiles and Projects",
+            Divider(
+              height: 20.0,
             ),
-            ImagePlacement("assets/images/Interests.png"),
+            ImagePlacement("assets/newImages/profile3.png"),
+            Divider(
+              height: 100.0,
+              thickness: 10.0,
+              color: Colors.green,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text(
+                  "The Projects page shows all of the currently defined Projects and their associated Profiles and Interests",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
+            ),
+            Divider(
+              height: 20.0,
+            ),
+            ImagePlacement("assets/newImages/project.png"),
+            Divider(
+              height: 100.0,
+              thickness: 10.0,
+              color: Colors.green,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text(
+                  "Create your own project!",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
+            ),
+            Divider(
+              height: 20.0,
+            ),
+            ImagePlacement("assets/newImages/addproject.png"),
+            Divider(
+              height: 100.0,
+              thickness: 10.0,
+              color: Colors.green,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text(
+                  "Finally, the Interests page shows all the currently defined Interests, and their associated Profiles and Projects",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
+            ),
+            Divider(
+              height: 20.0,
+            ),
+            ImagePlacement("assets/newImages/interests.png"),
           ],
         ),
       ),

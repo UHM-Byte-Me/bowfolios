@@ -101,11 +101,49 @@ class _YourProfileState extends State<YourProfile> {
                   },
                   dataSource: [
                     {
-                      "display":
-                          "Add a map frunction to pull stuff from database here",
-                      "value":
-                          "Add a map frunction to pull stuff from database here",
-                    }
+                      "display": "Software Engineering",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Climate Change",
+                      "value": "test",
+                    },
+                    {
+                      "display": "HPC",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Distributed Computing",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Renewable Energy",
+                      "value": "test",
+                    },
+                    {
+                      "display": "AI",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Visualization",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Scalabpe IP Networks",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Education Technology",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Distributed Computing",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Unity",
+                      "value": "test",
+                    },
                   ], // ..addAll(listOfInterests),
 
                   textField: 'display',

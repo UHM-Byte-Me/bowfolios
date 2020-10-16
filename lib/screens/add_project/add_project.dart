@@ -11,6 +11,7 @@ class AddProject extends StatefulWidget {
 class _AddProjectState extends State<AddProject> {
   final _userProject = Project();
   final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,11 +84,49 @@ class _AddProjectState extends State<AddProject> {
                   },
                   dataSource: [
                     {
-                      "display":
-                          "Add a map frunction to pull stuff from database here",
-                      "value":
-                          "Add a map frunction to pull stuff from database here",
-                    }
+                      "display": "Software Engineering",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Climate Change",
+                      "value": "test",
+                    },
+                    {
+                      "display": "HPC",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Distributed Computing",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Renewable Energy",
+                      "value": "test",
+                    },
+                    {
+                      "display": "AI",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Visualization",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Scalabpe IP Networks",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Education Technology",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Distributed Computing",
+                      "value": "test",
+                    },
+                    {
+                      "display": "Unity",
+                      "value": "test",
+                    },
                   ],
 
                   textField: 'display',
@@ -110,11 +149,29 @@ class _AddProjectState extends State<AddProject> {
                   },
                   dataSource: [
                     {
-                      "display":
-                          "Add a map frunction to pull stuff from database here",
-                      "value":
-                          "Add a map frunction to pull stuff from database here",
-                    }
+                      "display": "johnson@hawaii.edu",
+                      "value": "johnson@hawaii.edu",
+                    },
+                    {
+                      "display": "leighj@hawaii.edu",
+                      "value": "leighj@hawaii.edu",
+                    },
+                    {
+                      "display": "sin8@hawaii.edu",
+                      "value": "sin8@hawaii.edu",
+                    },
+                    {
+                      "display": "achriste@hawaii.edu",
+                      "value": "achriste@hawaii.edu",
+                    },
+                    {
+                      "display": "cmoore@hawaii.edu",
+                      "value": "cmoore@hawaii.edu",
+                    },
+                    {
+                      "display": "henric@hawaii.edu",
+                      "value": "henric@hawaii.edu",
+                    },
                   ],
 
                   textField: 'display',

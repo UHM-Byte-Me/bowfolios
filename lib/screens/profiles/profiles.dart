@@ -40,11 +40,30 @@ class Profiles extends StatelessWidget {
             ],
           ),
           Divider(),
-          Row(
-            children: [
-              Text('Projects'),
-            ],
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+              padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+              child: Text(
+                'Projects',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+
+                //style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+              ),
+            ),
           ),
+          // Row(
+          //   children: [
+          //     child: Container(
+          //     padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+          //     child: Text(
+          //       'Projects',
+          //       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+          //     ),),
+
+          //   ],
+
           Row(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
